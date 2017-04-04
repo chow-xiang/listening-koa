@@ -25,12 +25,9 @@ module.exports = class App{
 	}
 }
 
-
 function runChainFactory(req, res, mids){
 	return function run(i=0){
 		var mid = mids[i];
-		mid && mid(req, res, () => {
-			run(++i);
-		});
+		mid && mid(req, res, () => { run(++i) });
 	}
 }

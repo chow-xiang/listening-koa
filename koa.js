@@ -1,7 +1,7 @@
 'use strict';
 
-// var App = require('./app-express');
-var App = require('./app-koa');
+var App = require('./app-express');
+// var App = require('./app-koa');
 
 module.exports = koa;
 

@@ -5,18 +5,18 @@ var app = koa();
 
 app.use(function (req, res, next) {
 	req.a = 1;
-	// next()
+	next()
 })
 
 app.use(function (req, res, next) {
 	res.end('hello world!')
-	// next()
+	next()
 })
 
 
 app.use(function (req, res, next) {
 	res.end('404')
-	// next()
+	next()
 })
 
 app.listen({port: 3000})
